@@ -1,0 +1,91 @@
+  [4;36;1mSQL (0.000302)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.036251)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.002889)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000186)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000171)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2008-04-14 11:10:48) [GET]
+  Session ID: 9dfddca1c16b2bdbd7166860798489c4
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Rendering site/index
+Completed in 0.01664 (60 reqs/sec) | Rendering: 0.00125 (7%) | DB: 0.00000 (0%) | 200 OK [http://0.0.0.0/]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2008-04-21 14:22:20) [GET]
+  Session ID: b6a89c5c619da26557908ee9691b8509
+  Parameters: {"action"=>"index", "controller"=>"site"}
+Completed in 0.00241 (414 reqs/sec) | Rendering: 0.00005 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing SiteController#about_us (for 127.0.0.1 at 2008-04-21 14:22:35) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--f97fc4bb4765b16b2e462b89df8d347e2af668a9
+  Parameters: {"action"=>"about_us", "controller"=>"site"}
+Completed in 0.00232 (430 reqs/sec) | Rendering: 0.00004 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/site/about_us]
+  [4;36;1mSQL (0.025867)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000188)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000194)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000255)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.004883)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.002913)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.002533)[0m   [0mUPDATE schema_info SET version = 0[0m
+  [4;36;1mSQL (0.000343)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000193)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000504)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000338)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000183)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreatePosts (1)
+  [4;36;1mSQL (0.008219)[0m   [0;1mCREATE TABLE posts ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255) DEFAULT NULL, "body" text DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.002147)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000378)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.003696)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mPRAGMA index_list(posts)[0m
+  [4;36;1mSQL (0.000303)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000184)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000229)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000062)[0m   [0mPRAGMA index_list(posts)[0m
+  [4;36;1mSQL (0.000162)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: posts: DROP TABLE posts[0m
+  [4;36;1mSQL (0.042143)[0m   [0;1mCREATE TABLE posts ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255) DEFAULT NULL, "body" text DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.003730)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.002613)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.002542)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000303)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000178)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000169)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000229)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000061)[0m   [0mPRAGMA index_list(posts)[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: posts: DROP TABLE posts[0m
+  [4;36;1mSQL (0.045260)[0m   [0;1mCREATE TABLE posts ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255) DEFAULT NULL, "body" text DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.003734)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.003276)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.002972)[0m   [0mUPDATE schema_info SET version = 1[0m

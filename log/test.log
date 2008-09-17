@@ -1,0 +1,79 @@
+  [4;36;1mSQL (0.000582)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000635)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000224)[0m   [0;1mSELECT count(*) AS count_all FROM posts [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2008-04-23 10:14:40) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "post"=>{}, "controller"=>"posts"}
+  [4;35;1mPost Create (0.000198)[0m   [0mINSERT INTO posts ("updated_at", "body", "title", "created_at") VALUES('2008-04-23 10:14:40', NULL, NULL, '2008-04-23 10:14:40')[0m
+Redirected to http://test.host/posts/996332878
+Completed in 0.00462 (216 reqs/sec) | DB: 0.00042 (9%) | 302 Found [http://test.host/posts?]
+  [4;36;1mSQL (0.000158)[0m   [0;1mSELECT count(*) AS count_all FROM posts [0m
+  [4;35;1mSQL (0.000164)[0m   [0mSELECT count(*) AS count_all FROM posts [0m
+  [4;36;1mPost Load (0.000237)[0m   [0;1mSELECT * FROM posts WHERE (posts."id" = 953125641) [0m
+
+
+Processing PostsController#destroy (for 0.0.0.0 at 2008-04-23 10:14:40) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"posts"}
+  [4;35;1mPost Load (0.000222)[0m   [0mSELECT * FROM posts WHERE (posts."id" = 953125641) [0m
+  [4;36;1mPost Destroy (0.000122)[0m   [0;1m DELETE FROM posts
+ WHERE "id" = 953125641
+[0m
+Redirected to http://test.host/posts
+Completed in 0.00109 (920 reqs/sec) | DB: 0.00090 (83%) | 302 Found [http://test.host/posts/953125641]
+  [4;35;1mSQL (0.000141)[0m   [0mSELECT count(*) AS count_all FROM posts [0m
+  [4;36;1mPost Load (0.000604)[0m   [0;1mSELECT * FROM posts WHERE (posts."id" = 953125641) [0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2008-04-23 10:14:40) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"posts"}
+  [4;35;1mPost Load (0.000243)[0m   [0mSELECT * FROM posts WHERE (posts."id" = 953125641) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 0.00375 (266 reqs/sec) | Rendering: 0.00315 (83%) | DB: 0.00099 (26%) | 200 OK [http://test.host/posts/953125641/edit]
+
+
+Processing PostsController#index (for 0.0.0.0 at 2008-04-23 10:14:40) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.000388)[0m   [0;1mSELECT * FROM posts [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.00289 (346 reqs/sec) | Rendering: 0.00197 (68%) | DB: 0.00039 (13%) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2008-04-23 10:14:40) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 0.00230 (434 reqs/sec) | Rendering: 0.00202 (87%) | DB: 0.00000 (0%) | 200 OK [http://test.host/posts/new]
+  [4;35;1mPost Load (0.000248)[0m   [0mSELECT * FROM posts WHERE (posts."id" = 953125641) [0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2008-04-23 10:14:40) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"posts"}
+  [4;36;1mPost Load (0.000229)[0m   [0;1mSELECT * FROM posts WHERE (posts."id" = 953125641) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 0.01726 (57 reqs/sec) | Rendering: 0.01652 (95%) | DB: 0.00048 (2%) | 200 OK [http://test.host/posts/953125641]
+  [4;35;1mPost Load (0.000635)[0m   [0mSELECT * FROM posts WHERE (posts."id" = 953125641) [0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2008-04-23 10:14:40) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "post"=>{}, "id"=>"953125641", "controller"=>"posts"}
+  [4;36;1mPost Load (0.000268)[0m   [0;1mSELECT * FROM posts WHERE (posts."id" = 953125641) [0m
+  [4;35;1mPost Update (0.000195)[0m   [0mUPDATE posts SET "created_at" = '2008-04-23 10:14:40', "title" = 'MyString', "body" = 'MyText', "updated_at" = '2008-04-23 10:14:40' WHERE "id" = 953125641[0m
+Redirected to http://test.host/posts/953125641
+Completed in 0.00189 (529 reqs/sec) | DB: 0.00110 (58%) | 302 Found [http://test.host/posts/953125641?]
